@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Historial Clínico - NutriVida</title>
+  <link rel="icon" type="image/jpeg" href="NutriVida.jpg">
+
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="LoginNutrivida.html">Clínica NutriVida</a>
+    </div>
+  </nav>
+
+  <div class="container">
+    
+    <h1>Historial Clínico de Pacientes</h1>
+
+        <div class="card">
+        <h2>Seleccionar Paciente</h2>
+        <p>Busca en tu lista de pacientes asignados para ver la evolución de sus mediciones corporales.</p>
+        
+        <div class="form-group" style="margin-top: 15px;">
+            <select id="buscador-paciente" style="width: 100%; padding: 10px; border-radius: 4px; border: 1px solid #ccc; font-size: 16px;">
+                <option value="">-- Selecciona un paciente de tu agenda --</option>
+                <option value="1">Rodrigo Rojas</option>
+                <option value="2">Julia González</option>
+                <option value="3">Juan Pérez</option>
+            </select>
+        </div>
+    </div>
+    <div class="card" id="tabla-historial-container" style="display: none;">
+        <h2 id="nombre-paciente-historial">Historial de Progreso</h2>
+        
+        <div style="overflow-x: auto;">
+            <table style="width: 100%; border-collapse: collapse; margin-top: 15px; min-width: 600px;">
+                <thead>
+                    <tr style="background-color: #cc0000; color: white;">
+                        <th style="padding: 12px; border: 1px solid #ff9999; text-align: center;">Fecha</th>
+                        <th style="padding: 12px; border: 1px solid #ff9999; text-align: center;">Peso (kg)</th>
+                        <th style="padding: 12px; border: 1px solid #ff9999; text-align: center;">Estatura (cm)</th>
+                        <th style="padding: 12px; border: 1px solid #ff9999; text-align: center;">Cintura (cm)</th>
+                        <th style="padding: 12px; border: 1px solid #ff9999; text-align: center;">IMC</th>
+                    </tr>
+                </thead>
+                <tbody id="cuerpo-historial">
+                </tbody>
+            </table>
+        </div>
+
+        <button type="button" class="btn-red" style="margin-top: 20px; width: auto;" onclick="window.location.href='nutricionista.html'">Volver al Panel</button>
+    </div>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

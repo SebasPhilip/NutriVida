@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clientes y Planes - NutriVida</title>
+  <link rel="icon" type="image/jpeg" href="NutriVida.jpg">
+
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="LoginNutrivida.html">Clínica NutriVida (Admin)</a>
+    </div>
+  </nav>
+
+  <div class="container">
+    
+    <h1>Gestión de Clientes y Planes</h1>
+    <div style="margin-bottom: 20px; display: flex; gap: 15px;">
+        <a href="admin.html" class="btn-red" style="background-color: #555555; text-decoration: none; text-align: center; width: auto;">Estadísticas Generales</a>
+        <a href="ClientesPlanes.html" class="btn-red" style="background-color: #cc0000; text-decoration: none; text-align: center; width: auto;">Ver Clientes y Planes</a>
+    </div>
+    <div class="card">
+        <h2>Resumen de Planes Activos</h2>
+        <p>Distribución actual de los servicios contratados por los pacientes.</p>
+        
+        <div style="display: flex; gap: 20px; flex-wrap: wrap; margin-top: 15px;">
+            <div style="flex: 1; background-color: #fff8f8; border: 1px solid #ff9999; padding: 15px; border-radius: 8px; text-align: center;">
+                <h3 style="margin-top: 0; color: #cc0000; font-size: 1.2em;">Pérdida de Peso (1 mes)</h3>
+                <p style="font-size: 2.5em; font-weight: bold; margin: 10px 0;">45</p>
+                <p style="margin: 0; font-size: 0.9em; color: #666;">Pacientes activos</p>
+            </div>
+            <div style="flex: 1; background-color: #fff8f8; border: 1px solid #ff9999; padding: 15px; border-radius: 8px; text-align: center;">
+                <h3 style="margin-top: 0; color: #cc0000; font-size: 1.2em;">Nutrición Deportiva</h3>
+                <p style="font-size: 2.5em; font-weight: bold; margin: 10px 0;">30</p>
+                <p style="margin: 0; font-size: 0.9em; color: #666;">Pacientes activos</p>
+            </div>
+            <div style="flex: 1; background-color: #fff8f8; border: 1px solid #ff9999; padding: 15px; border-radius: 8px; text-align: center;">
+                <h3 style="margin-top: 0; color: #cc0000; font-size: 1.2em;">Controles Individuales</h3>
+                <p style="font-size: 2.5em; font-weight: bold; margin: 10px 0;">67</p>
+                <p style="margin: 0; font-size: 0.9em; color: #666;">Pacientes recurrentes</p>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <h2>Listado de Clientes (Últimos Registros)</h2>
+        
+        <div style="overflow-x: auto;">
+            <table style="width: 100%; border-collapse: collapse; margin-top: 15px; min-width: 600px;">
+                <tr style="background-color: #cc0000; color: white;">
+                    <th style="padding: 12px; border: 1px solid #ff9999; text-align: left;">Paciente</th>
+                    <th style="padding: 12px; border: 1px solid #ff9999; text-align: left;">Plan / Servicio Contratado</th>
+                    <th style="padding: 12px; border: 1px solid #ff9999; text-align: center;">Estado</th>
+                    <th style="padding: 12px; border: 1px solid #ff9999; text-align: left;">Profesional Asignado</th>
+                </tr>
+                <tr style="background-color: #fff8f8;">
+                    <td style="padding: 12px; border: 1px solid #ff9999;">Rodrigo Rojas</td>
+                    <td style="padding: 12px; border: 1px solid #ff9999;">[PL001] Plan pérdida de peso (1 mes)</td>
+                    <td style="padding: 12px; border: 1px solid #ff9999; text-align: center; color: green; font-weight: bold;">Activo</td>
+                    <td style="padding: 12px; border: 1px solid #ff9999;">Nut. Carolina Fuentes M.</td>
+                </tr>
+                <tr>
+                    <td style="padding: 12px; border: 1px solid #ff9999;">Juan Pérez</td>
+                    <td style="padding: 12px; border: 1px solid #ff9999;">[PL003] Nutrición deportiva (1 mes)</td>
+                    <td style="padding: 12px; border: 1px solid #ff9999; text-align: center; color: green; font-weight: bold;">Activo</td>
+                    <td style="padding: 12px; border: 1px solid #ff9999;">Nut. Rodrigo Sepúlveda A.</td>
+                </tr>
+                <tr style="background-color: #fff8f8;">
+                    <td style="padding: 12px; border: 1px solid #ff9999;">Carmen Silva</td>
+                    <td style="padding: 12px; border: 1px solid #ff9999;">[CN001] Primera consulta</td>
+                    <td style="padding: 12px; border: 1px solid #ff9999; text-align: center; color: orange; font-weight: bold;">Finalizado</td>
+                    <td style="padding: 12px; border: 1px solid #ff9999;">Nut. Carolina Fuentes M.</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

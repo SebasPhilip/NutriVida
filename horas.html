@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mis Citas - NutriVida</title>
+  <link rel="icon" type="image/jpeg" href="NutriVida.jpg">
+
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="LoginNutrivida.html">Clínica NutriVida</a>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h1>Gestión de Citas</h1>
+    <div class="card">
+      <h2>Mi Próxima Cita</h2>
+      <p>Tienes una cita programada. Puedes modificarla o cancelarla si no puedes asistir.</p>
+      
+      <div class="cita-activa">
+        <p><strong>Nutricionista:</strong> Nut. Carolina Fuentes M.s</p>
+        <p><strong>Fecha:</strong> Jueves, 17 de Septiembre de 2026</p>
+        <p><strong>Hora:</strong> 15:30 hrs</p>
+        <p><strong>Motivo:</strong> Control mensual de peso</p>
+      </div>
+
+      <div class="acciones-cita">
+        <button type="button" class="btn-red" id="btn-modificar">Modificar Hora</button>
+        <button type="button" class="btn-red" id="btn-cancelar">Cancelar Hora</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Agendar Nueva Cita</h2>
+      <p>Selecciona a tu profesional, el día y la hora para tu próxima evaluación.</p>
+      
+      <form id="form-agendar">
+        
+        <div class="form-group">
+          <label for="profesional">Nutricionista:</label>
+          <select id="profesional" name="profesional" required>
+            <option value="">-- Selecciona un profesional --</option>
+            <option value="1">Nut. Carolina Fuentes M. (Obesidad y síndrome metabólico)</option>
+            <option value="2">Nut. Rodrigo Sepúlveda A. (Nutrición deportiva y rendimiento)</option>
+            <option value="3">Nut. Daniela Morales C. Alimentación vegetariana, vegana y trastornos alimentarios</option>
+            <option value="4">Nut. Felipe Araya R. (Nutrición pediátrica y familiar)</option>
+          </select>
+        </div>
+
+        <div class="form-group-row">
+          <div class="form-group">
+            <label for="fecha">Fecha:</label>
+            <input type="date" id="fecha" name="fecha" required>
+          </div>
+          <div class="form-group">
+            <label for="hora">Hora:</label>
+            <input type="time" id="hora" name="hora" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="motivo">Motivo de la consulta:</label>
+          <select id="motivo" name="motivo" required>
+            <option value="">-- Selecciona el motivo --</option>
+            <option value="primera">Primera consulta (Evaluación inicial)</option>
+            <option value="control">Control de seguimiento</option>
+            <option value="plan">Entrega de plan alimenticio</option>
+          </select>
+        </div>
+
+        <button type="submit" class="btn-red" id="btn-agendar">Confirmar y Agendar</button>
+      </form>
+    </div>
+
+  </div>
+  <script src="app.js"></script>
+
+</body>
+</html>

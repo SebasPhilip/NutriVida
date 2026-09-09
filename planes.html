@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestión de Planes - NutriVida</title>
+  <link rel="icon" type="image/jpeg" href="NutriVida.jpg">
+
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="LoginNutrivida.html">Clínica NutriVida</a>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h1>Gestión de Planes Alimenticios</h1>
+
+    <div class="card">
+      <h2>Mi Plan Actual</h2>
+      <p>Este es el plan nutricional que tienes activo actualmente.</p>
+      
+      <div class="plan-activo" id="plan-actual-box">
+        <p class="plan-titulo">[PL001] Plan pérdida de peso (1 mes)</p>
+        <p><strong>Modalidad:</strong> Presencial</p>
+        <p><strong>Valor:</strong> $65.000 CLP</p>
+        <p><strong>Descripción:</strong> Incluye primera consulta + 1 control quincenal + plan alimenticio personalizado + seguimiento por WhatsApp.</p>
+      </div>
+      
+      <div class="acciones-cita" style="display: flex; gap: 15px; flex-wrap: wrap;">
+        <button type="button" class="btn-red" id="btn-cambiar-plan" style="width: auto;">Cambiar Plan</button>
+        <button type="button" class="btn-red" id="btn-eliminar-plan" style="width: auto; background-color: #333333;">Eliminar Plan</button>
+        <a href="#" class="btn-red btn-descargar" style="width: auto; background-color: #555555; text-align: center;">Descargar Pauta PDF</a>
+      </div>
+    </div>
+
+    <div class="card">
+        <h2>Mi Historial de Progreso</h2>
+        <p>Evolución de tus mediciones registradas por el profesional en tus últimos controles.</p>
+        
+        <div style="overflow-x: auto;">
+            <table style="width: 100%; border-collapse: collapse; margin-top: 15px; min-width: 500px;">
+                <tr style="background-color: #cc0000; color: white;">
+                    <th style="padding: 12px; border: 1px solid #ff9999; text-align: center;">Fecha</th>
+                    <th style="padding: 12px; border: 1px solid #ff9999; text-align: center;">Peso (kg)</th>
+                    <th style="padding: 12px; border: 1px solid #ff9999; text-align: center;">Cintura (cm)</th>
+                    <th style="padding: 12px; border: 1px solid #ff9999; text-align: center;">IMC</th>
+                </tr>
+                <tr style="text-align: center; background-color: #fff8f8;">
+                    <td style="padding: 12px; border: 1px solid #ff9999;">17/08/2026</td>
+                    <td style="padding: 12px; border: 1px solid #ff9999;">78.5</td>
+                    <td style="padding: 12px; border: 1px solid #ff9999;">92</td>
+                    <td style="padding: 12px; border: 1px solid #ff9999;">25.6</td>
+                </tr>
+                <tr style="text-align: center;">
+                    <td style="padding: 12px; border: 1px solid #ff9999;">17/07/2026</td>
+                    <td style="padding: 12px; border: 1px solid #ff9999;">80.2</td>
+                    <td style="padding: 12px; border: 1px solid #ff9999;">95</td>
+                    <td style="padding: 12px; border: 1px solid #ff9999;">26.2</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="card">
+      <h2>Contratar un Nuevo Plan o Servicio</h2>
+      <p>Selecciona el servicio que mejor se adapte a tus necesidades. Los valores están sujetos al catálogo vigente.</p>
+      
+      <form id="form-planes">
+        
+        <div class="form-group">
+          <label for="tipo_servicio">Categoría:</label>
+          <select id="tipo_servicio" name="tipo_servicio" required>
+            <option value="">-- Selecciona una categoría --</option>
+            <option value="consulta">Consultas y Controles Individuales</option>
+            <option value="plan">Planes Especializados Mensuales</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="servicio_especifico">Servicio Específico:</label>
+          <select id="servicio_especifico" name="servicio_especifico" required disabled>
+            <option value="">-- Selecciona primero la categoría --</option>
+          </select>
+        </div>
+
+        <div id="precio-box" class="precio-box" style="display: none;">
+            <p><strong>Valor a pagar:</strong> <span id="precio-valor" class="precio-destacado"></span></p>
+            <p id="precio-desc" class="precio-descripcion"></p>
+        </div>
+
+        <button type="submit" class="btn-red" id="btn-contratar">Solicitar Plan</button>
+      </form>
+    </div>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

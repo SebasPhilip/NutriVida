@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="estilos.css">
+  <title>Nutrivida: Inicio de sesión</title>
+  <link rel="icon" type="image/jpeg" href="NutriVida.jpg">
+
+</head>
+<body>
+  <div>
+    <h1>Inicio de sesión</h1>
+
+    <form id="login">
+      <div>
+        <label for="correo">Correo:</label>
+        <input 
+          type="email" 
+          id="correo" 
+          name="correo" 
+          maxlength="100" 
+          pattern="^[\w\.-]+@(duoc\.cl|profesor\.duoc\.cl|gmail\.com)$" 
+          required
+        >
+      </div>
+
+      <div>
+        <label for="password">Contraseña:</label>
+        <input 
+          type="password" 
+          id="password" 
+          name="password" 
+          minlength="4" 
+          maxlength="10" 
+          required
+        >
+      </div>
+
+      <button type="submit">Iniciar sesión</button>
+    </form>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

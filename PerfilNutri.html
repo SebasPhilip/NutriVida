@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Perfil y Agenda - NutriVida</title>
+  <link rel="icon" type="image/jpeg" href="NutriVida.jpg">
+
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+  
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="LoginNutrivida.html">Clínica NutriVida</a>
+    </div>
+  </nav>
+
+  
+  <div class="container">
+    
+    <h1>Mi Perfil y Agenda</h1>
+
+    
+    <div class="card" style="display: flex; gap: 25px; align-items: flex-start; flex-wrap: wrap;">
+        
+        <div style="flex: 1; min-width: 250px; text-align: center;">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVri51aVNMv924vcxfgXR1e3qBCmjiyrSyXWcG0tNGJg&s=10" alt="Nut. Carolina Fuentes M." style="width: 100%; max-width: 280px; border-radius: 8px; border: 2px solid #cc0000; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+        </div>
+        
+        
+        <div style="flex: 2; min-width: 300px;">
+            <h2 style="margin-top: 0; color: #cc0000; border-bottom: 2px solid #ff9999; padding-bottom: 5px;">  Nut. Carolina Fuentes M.</h2>
+            <p><strong>Especialidad:</strong> Obesidad y síndrome metabólico</p>
+            <p><strong>Correo Clínico:</strong> c.fuentes@duoc.cl</p>
+            <p><strong>Teléfono:</strong> +56 9 8765 4321</p>
+            <p><strong>Biografía:</strong> Nutricionista egresada con más de 8 años de experiencia.</p>
+            <button type="button" class="btn-red" style="width: auto; margin-top: 10px;">Editar Mis Datos</button>
+        </div>
+    </div>
+>
+    <div class="card">
+        <h2>Mi Agenda - Hoy</h2>
+        <p>Pacientes confirmados para el turno actual.</p>
+        
+        <div style="overflow-x: auto;">
+            <table style="width: 100%; border-collapse: collapse; margin-top: 15px; min-width: 600px;">
+                <tr style="background-color: #cc0000; color: white;">
+                    <th style="padding: 12px; border: 1px solid #ff9999; text-align: center;">Hora</th>
+                    <th style="padding: 12px; border: 1px solid #ff9999; text-align: left;">Paciente</th>
+                    <th style="padding: 12px; border: 1px solid #ff9999; text-align: left;">Motivo</th>
+                    <th style="padding: 12px; border: 1px solid #ff9999; text-align: center;">Acción</th>
+                </tr>
+                <tr style="background-color: #fff8f8;">
+                    <td style="padding: 12px; border: 1px solid #ff9999; text-align: center;"><strong>15:30</strong></td>
+                    <td style="padding: 12px; border: 1px solid #ff9999;">Rodrigo Rojas</td>
+                    <td style="padding: 12px; border: 1px solid #ff9999;">Control mensual de peso</td>
+                    <td style="padding: 12px; border: 1px solid #ff9999; text-align: center;">
+                        <a href="Registro.html" class="btn-red" style="padding: 6px 12px; font-size: 0.9em; text-decoration: none;">Atender Ficha</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding: 12px; border: 1px solid #ff9999; text-align: center;"><strong>16:45</strong></td>
+                    <td style="padding: 12px; border: 1px solid #ff9999;">Julia González</td>
+                    <td style="padding: 12px; border: 1px solid #ff9999;">Primera consulta (Evaluación)</td>
+                    <td style="padding: 12px; border: 1px solid #ff9999; text-align: center;">
+                        <a href="Registro.html" class="btn-red" style="padding: 6px 12px; font-size: 0.9em; text-decoration: none;">Atender Ficha</a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
